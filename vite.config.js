@@ -27,6 +27,7 @@ function mediaAutoDiscoveryPlugin() {
 }
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     mediaAutoDiscoveryPlugin()

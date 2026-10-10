@@ -15,9 +15,9 @@ export default function TealSareeCinematicSection() {
   const videoRef = useRef(null);
   const { pauseMusic } = useAudio();
 
-  const photoSrc = '/photos/WhatsApp Image 2026-10-10 at 10.00.19 PM.jpeg';
-  const videoSrc = '/videos/154135-807166717_medium.mp4';
-  const songSrc = '/music/vignesh.m4r';
+  const photoSrc = './photos/WhatsApp Image 2026-10-10 at 10.00.19 PM.jpeg';
+  const videoSrc = './videos/154135-807166717_medium.mp4';
+  const songSrc = './music/vignesh.m4r';
 
   const togglePlay = () => {
     if (!audioRef.current) return;

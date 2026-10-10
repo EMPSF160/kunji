@@ -114,7 +114,7 @@ function scanFolder(relativeFolder, allowedExtensions, type) {
         return {
           id: `${relativeFolder}-${index + 1}`,
           filename: file,
-          src: `/${relativeFolder}/${file}`,
+          src: `./${relativeFolder}/${file}`,
           title: formatMediaTitle(file, type, index),
           extension: ext,
           mime

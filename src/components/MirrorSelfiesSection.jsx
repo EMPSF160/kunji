@@ -5,7 +5,7 @@ import { Heart, Sparkles, Maximize2, X, ChevronLeft, ChevronRight, Smile, Camera
 const FOUR_MIRROR_MOMENTS = [
   {
     id: 'mirror-1',
-    src: '/photos/WhatsApp Image 2026-10-10 at 10.01.59 PM.jpeg',
+    src: './photos/WhatsApp Image 2026-10-10 at 10.01.59 PM.jpeg',
     title: 'Our Reflection & Little Secrets',
     caption: 'Standing together in front of the mirror, matching our smiles. [No one sees what you see even if they see it too]. You made every simple place feel like our own private universe.',
     sweetNote: 'Best mirror selfie duo on earth.',
@@ -14,7 +14,7 @@ const FOUR_MIRROR_MOMENTS = [
   },
   {
     id: 'mirror-2',
-    src: '/photos/WhatsApp Image 2026-10-10 at 10.02.00 PM (1).jpeg',
+    src: './photos/WhatsApp Image 2026-10-10 at 10.02.00 PM (1).jpeg',
     title: 'Leaning On Each Other',
     caption: 'That cozy smile when you leaned your head gently onto my shoulder. No matter how exhausting the world was, having you close made everything completely peaceful.',
     sweetNote: 'You had that album cover pose ready to go.',
@@ -23,7 +23,7 @@ const FOUR_MIRROR_MOMENTS = [
   },
   {
     id: 'mirror-3',
-    src: '/photos/WhatsApp Image 2026-10-10 at 10.02.00 PM.jpeg',
+    src: './photos/WhatsApp Image 2026-10-10 at 10.02.00 PM.jpeg',
     title: 'That Sweetest Head Tilt',
     caption: 'You looking into the phone with that soft, playful expression. The way your smile could instantly fix whatever difficult day I was having.',
     sweetNote: 'I was trying to pose, but you stole the whole spotlight.',
@@ -32,7 +32,7 @@ const FOUR_MIRROR_MOMENTS = [
   },
   {
     id: 'mirror-4',
-    src: '/photos/WhatsApp Image 2026-10-10 at 10.02.01 PM.jpeg',
+    src: './photos/WhatsApp Image 2026-10-10 at 10.02.01 PM.jpeg',
     title: 'Our Forever Favorite Frame',
     caption: 'Looking into the mirror together, realizing that in a world full of noise, you were the only constant peace and comfort I ever truly wanted.',
     sweetNote: 'Every mirror still echoes with our laughter.',

@@ -1,115 +1,115 @@
 {
-  "updatedAt": "2026-10-10T17:54:53.250Z",
+  "updatedAt": "2026-10-10T18:05:01.612Z",
   "photos": [
     {
       "id": "photos-1",
       "filename": "WhatsApp Image 2026-10-10 at 10.00.18 PM (1).jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.00.18 PM (1).jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.00.18 PM (1).jpeg",
       "title": "The Chai & Rain Magic",
       "extension": ".jpeg"
     },
     {
       "id": "photos-2",
       "filename": "WhatsApp Image 2026-10-10 at 10.00.18 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.00.18 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.00.18 PM.jpeg",
       "title": "Caught In 4K Being Cute",
       "extension": ".jpeg"
     },
     {
       "id": "photos-3",
       "filename": "WhatsApp Image 2026-10-10 at 10.00.19 PM (1).jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.00.19 PM (1).jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.00.19 PM (1).jpeg",
       "title": "The Stolen Hoodie Incident",
       "extension": ".jpeg"
     },
     {
       "id": "photos-4",
       "filename": "WhatsApp Image 2026-10-10 at 10.00.19 PM (2).jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.00.19 PM (2).jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.00.19 PM (2).jpeg",
       "title": "Unapologetic Car Karaoke",
       "extension": ".jpeg"
     },
     {
       "id": "photos-5",
       "filename": "WhatsApp Image 2026-10-10 at 10.00.19 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.00.19 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.00.19 PM.jpeg",
       "title": "The 2 AM Food Debate",
       "extension": ".jpeg"
     },
     {
       "id": "photos-6",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.48 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.48 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.48 PM.jpeg",
       "title": "The Eye Contact Telepathy",
       "extension": ".jpeg"
     },
     {
       "id": "photos-7",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.49 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.49 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.49 PM.jpeg",
       "title": "The Cute Angry Pout",
       "extension": ".jpeg"
     },
     {
       "id": "photos-8",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.57 PM (1).jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.57 PM (1).jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.57 PM (1).jpeg",
       "title": "Our Long Quiet Walks",
       "extension": ".jpeg"
     },
     {
       "id": "photos-9",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.57 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.57 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.57 PM.jpeg",
       "title": "Failed Aesthetic Photos",
       "extension": ".jpeg"
     },
     {
       "id": "photos-10",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.58 PM (1).jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.58 PM (1).jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.58 PM (1).jpeg",
       "title": "When Your Eyes Light Up",
       "extension": ".jpeg"
     },
     {
       "id": "photos-11",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.58 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.58 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.58 PM.jpeg",
       "title": "The 'Did You Eat?' Care",
       "extension": ".jpeg"
     },
     {
       "id": "photos-12",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.59 PM (1).jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.59 PM (1).jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.59 PM (1).jpeg",
       "title": "Dancing With No Music",
       "extension": ".jpeg"
     },
     {
       "id": "photos-13",
       "filename": "WhatsApp Image 2026-10-10 at 10.01.59 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.01.59 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.01.59 PM.jpeg",
       "title": "Drenched In The Rain",
       "extension": ".jpeg"
     },
     {
       "id": "photos-14",
       "filename": "WhatsApp Image 2026-10-10 at 10.02.00 PM (1).jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.02.00 PM (1).jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.02.00 PM (1).jpeg",
       "title": "Sleepy Morning Voice",
       "extension": ".jpeg"
     },
     {
       "id": "photos-15",
       "filename": "WhatsApp Image 2026-10-10 at 10.02.00 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.02.00 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.02.00 PM.jpeg",
       "title": "Promises Under Stars",
       "extension": ".jpeg"
     },
     {
       "id": "photos-16",
       "filename": "WhatsApp Image 2026-10-10 at 10.02.01 PM.jpeg",
-      "src": "/photos/WhatsApp Image 2026-10-10 at 10.02.01 PM.jpeg",
+      "src": "./photos/WhatsApp Image 2026-10-10 at 10.02.01 PM.jpeg",
       "title": "Effortlessly, Beautifully You",
       "extension": ".jpeg"
     }
@@ -118,7 +118,7 @@
     {
       "id": "videos-1",
       "filename": "154135-807166717_medium.mp4",
-      "src": "/videos/154135-807166717_medium.mp4",
+      "src": "./videos/154135-807166717_medium.mp4",
       "title": "154135 807166717 Medium",
       "extension": ".mp4",
       "mime": "video/mp4"
@@ -126,7 +126,7 @@
     {
       "id": "videos-2",
       "filename": "sms.mp4",
-      "src": "/videos/sms.mp4",
+      "src": "./videos/sms.mp4",
       "title": "Sms",
       "extension": ".mp4",
       "mime": "video/mp4"
@@ -134,7 +134,7 @@
     {
       "id": "videos-3",
       "filename": "WhatsApp Video 2026-10-10 at 10.01.43 PM.mp4",
-      "src": "/videos/WhatsApp Video 2026-10-10 at 10.01.43 PM.mp4",
+      "src": "./videos/WhatsApp Video 2026-10-10 at 10.01.43 PM.mp4",
       "title": "Moment in Motion #3",
       "extension": ".mp4",
       "mime": "video/mp4"
@@ -142,7 +142,7 @@
     {
       "id": "videos-4",
       "filename": "WhatsApp Video 2026-10-10 at 10.01.44 PM.mp4",
-      "src": "/videos/WhatsApp Video 2026-10-10 at 10.01.44 PM.mp4",
+      "src": "./videos/WhatsApp Video 2026-10-10 at 10.01.44 PM.mp4",
       "title": "Moment in Motion #4",
       "extension": ".mp4",
       "mime": "video/mp4"
@@ -150,7 +150,7 @@
     {
       "id": "videos-5",
       "filename": "WhatsApp Video 2026-10-10 at 10.01.46 PM.mp4",
-      "src": "/videos/WhatsApp Video 2026-10-10 at 10.01.46 PM.mp4",
+      "src": "./videos/WhatsApp Video 2026-10-10 at 10.01.46 PM.mp4",
       "title": "Moment in Motion #5",
       "extension": ".mp4",
       "mime": "video/mp4"
@@ -158,7 +158,7 @@
     {
       "id": "videos-6",
       "filename": "WhatsApp Video 2026-10-10 at 10.01.47 PM.mp4",
-      "src": "/videos/WhatsApp Video 2026-10-10 at 10.01.47 PM.mp4",
+      "src": "./videos/WhatsApp Video 2026-10-10 at 10.01.47 PM.mp4",
       "title": "Moment in Motion #6",
       "extension": ".mp4",
       "mime": "video/mp4"
@@ -166,7 +166,7 @@
     {
       "id": "videos-7",
       "filename": "WhatsApp Video 2026-10-10 at 10.01.55 PM.mp4",
-      "src": "/videos/WhatsApp Video 2026-10-10 at 10.01.55 PM.mp4",
+      "src": "./videos/WhatsApp Video 2026-10-10 at 10.01.55 PM.mp4",
       "title": "Moment in Motion #7",
       "extension": ".mp4",
       "mime": "video/mp4"
@@ -176,7 +176,7 @@
     {
       "id": "music-1",
       "filename": "E.m4r",
-      "src": "/music/E.m4r",
+      "src": "./music/E.m4r",
       "title": "Eternal Echoes",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -184,7 +184,7 @@
     {
       "id": "music-2",
       "filename": "kov.m4r",
-      "src": "/music/kov.m4r",
+      "src": "./music/kov.m4r",
       "title": "Kovai Twilight Melody",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -192,7 +192,7 @@
     {
       "id": "music-3",
       "filename": "nanum rowdy than song.m4r",
-      "src": "/music/nanum rowdy than song.m4r",
+      "src": "./music/nanum rowdy than song.m4r",
       "title": "Naanum Rowdy Dhaan (Our Anthem)",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -200,7 +200,7 @@
     {
       "id": "music-4",
       "filename": "O.m4r",
-      "src": "/music/O.m4r",
+      "src": "./music/O.m4r",
       "title": "Only You",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -208,7 +208,7 @@
     {
       "id": "music-5",
       "filename": "POD.m4r",
-      "src": "/music/POD.m4r",
+      "src": "./music/POD.m4r",
       "title": "A Promise of Dawn",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -216,7 +216,7 @@
     {
       "id": "music-6",
       "filename": "PPPPP.m4r",
-      "src": "/music/PPPPP.m4r",
+      "src": "./music/PPPPP.m4r",
       "title": "Echoes of Laughter",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -224,7 +224,7 @@
     {
       "id": "music-7",
       "filename": "prtiviraj.m4r",
-      "src": "/music/prtiviraj.m4r",
+      "src": "./music/prtiviraj.m4r",
       "title": "Prithviraj Gentle Theme",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -232,14 +232,14 @@
     {
       "id": "music-8",
       "filename": "sms.m4a",
-      "src": "/music/sms.m4a",
+      "src": "./music/sms.m4a",
       "title": "Sms",
       "extension": ".m4a"
     },
     {
       "id": "music-9",
       "filename": "sp.m4r",
-      "src": "/music/sp.m4r",
+      "src": "./music/sp.m4r",
       "title": "SP Special Theme",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -247,7 +247,7 @@
     {
       "id": "music-10",
       "filename": "ss.m4r",
-      "src": "/music/ss.m4r",
+      "src": "./music/ss.m4r",
       "title": "Soft Whispers",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -255,7 +255,7 @@
     {
       "id": "music-11",
       "filename": "su.m4r",
-      "src": "/music/su.m4r",
+      "src": "./music/su.m4r",
       "title": "Sweet Serenade",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -263,7 +263,7 @@
     {
       "id": "music-12",
       "filename": "surya.m4r",
-      "src": "/music/surya.m4r",
+      "src": "./music/surya.m4r",
       "title": "Surya Breeze Melody",
       "extension": ".m4r",
       "mime": "audio/mp4"
@@ -271,7 +271,7 @@
     {
       "id": "music-13",
       "filename": "theriyamaley tholaigran.mp3.mpeg",
-      "src": "/music/theriyamaley tholaigran.mp3.mpeg",
+      "src": "./music/theriyamaley tholaigran.mp3.mpeg",
       "title": "Theriyamaley Tholaigiren",
       "extension": ".mpeg",
       "mime": "audio/mpeg"
@@ -279,14 +279,14 @@
     {
       "id": "music-14",
       "filename": "vignesh.m4a",
-      "src": "/music/vignesh.m4a",
+      "src": "./music/vignesh.m4a",
       "title": "Vignesh Memories Theme",
       "extension": ".m4a"
     },
     {
       "id": "music-15",
       "filename": "vignesh.m4r",
-      "src": "/music/vignesh.m4r",
+      "src": "./music/vignesh.m4r",
       "title": "Vignesh Memories Theme",
       "extension": ".m4r",
       "mime": "audio/mp4"

@@ -5,7 +5,7 @@ import { Heart, Sparkles, Maximize2, X, ChevronLeft, ChevronRight, Smile } from 
 const SPECIAL_THREE_MOMENTS = [
   {
     id: 'special-1',
-    src: '/photos/WhatsApp Image 2026-10-10 at 10.01.58 PM (1).jpeg',
+    src: './photos/WhatsApp Image 2026-10-10 at 10.01.58 PM (1).jpeg',
     title: 'When Your Eyes Light Up',
     caption: 'That candid moment with you by my side. You passionately explaining something you love, and me just sitting there lost in how radiant your smile is.',
     sweetNote: 'I was holding the helmet, but you were holding my whole heart.',
@@ -14,7 +14,7 @@ const SPECIAL_THREE_MOMENTS = [
   },
   {
     id: 'special-2',
-    src: '/photos/WhatsApp Image 2026-10-10 at 10.01.58 PM.jpeg',
+    src: './photos/WhatsApp Image 2026-10-10 at 10.01.58 PM.jpeg',
     title: "The 'Did You Eat?' Check-ins",
     caption: 'Standing side by side on that bright afternoon. The way you always scolded me to eat on time and drink water, caring for me in ways nobody else ever has.',
     sweetNote: 'My personal caring protector & favorite person.',
@@ -23,7 +23,7 @@ const SPECIAL_THREE_MOMENTS = [
   },
   {
     id: 'special-3',
-    src: '/photos/WhatsApp Image 2026-10-10 at 10.01.59 PM (1).jpeg',
+    src: './photos/WhatsApp Image 2026-10-10 at 10.01.59 PM (1).jpeg',
     title: 'Dancing With No Music',
     caption: 'Standing together by the plants. That quiet comfort of knowing that no matter what happened around us, having you close made everything peaceful.',
     sweetNote: 'The one person I would choose in every lifetime.',

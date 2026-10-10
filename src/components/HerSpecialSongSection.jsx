@@ -13,8 +13,8 @@ export default function HerSpecialSongSection() {
   const audioRef = useRef(null);
   const { pauseMusic } = useAudio(); // To pause background soundtrack if this special song plays
 
-  const photoSrc = '/photos/WhatsApp Image 2026-10-10 at 10.01.57 PM.jpeg';
-  const songSrc = '/videos/sms.mp4';
+  const photoSrc = './photos/WhatsApp Image 2026-10-10 at 10.01.57 PM.jpeg';
+  const songSrc = './videos/sms.mp4';
 
   const togglePlay = () => {
     if (!audioRef.current) return;
