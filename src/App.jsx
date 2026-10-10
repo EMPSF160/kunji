@@ -49,7 +49,7 @@ export default function App() {
   }
 
   return (
-    <div className="relative min-h-screen selection:bg-rosegold-500/30 selection:text-white">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden selection:bg-rosegold-500/30 selection:text-white">
       {/* Background Starlight & Nebula Canvas */}
       <StarfieldCanvas />
 
