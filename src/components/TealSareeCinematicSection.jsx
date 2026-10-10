@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Pause, Volume2, VolumeX, Sparkles, Heart, Maximize2, X, Film, RotateCcw } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, Sparkles, Heart, Maximize2, X, Film, RotateCcw, Music } from 'lucide-react';
 import { useAudio } from '../context/AudioContext';
 
 export default function TealSareeCinematicSection() {
@@ -10,22 +10,29 @@ export default function TealSareeCinematicSection() {
   const [duration, setDuration] = useState(0);
   const [isLiked, setIsLiked] = useState(true);
   const [showPhotoLightbox, setShowPhotoLightbox] = useState(false);
-  const [activeTab, setActiveTab] = useState('both'); // 'both' | 'photo' | 'video'
+  
+  const audioRef = useRef(null);
   const videoRef = useRef(null);
   const { pauseMusic } = useAudio();
 
   const photoSrc = '/photos/WhatsApp Image 2026-10-10 at 10.00.19 PM.jpeg';
   const videoSrc = '/videos/154135-807166717_medium.mp4';
+  const songSrc = '/music/vignesh.m4r';
 
   const togglePlay = () => {
-    if (!videoRef.current) return;
+    if (!audioRef.current) return;
     if (isPlaying) {
-      videoRef.current.pause();
+      audioRef.current.pause();
+      if (videoRef.current) videoRef.current.pause();
       setIsPlaying(false);
     } else {
-      pauseMusic(); // Pause global music so audio doesn't clash
-      videoRef.current.play().then(() => {
+      pauseMusic(); // Pause global soundtrack
+      audioRef.current.play().then(() => {
         setIsPlaying(true);
+        if (videoRef.current) {
+          videoRef.current.muted = true;
+          videoRef.current.play().catch(() => {});
+        }
       }).catch((e) => {
         console.warn('Playback error:', e);
       });
@@ -33,31 +40,38 @@ export default function TealSareeCinematicSection() {
   };
 
   const handleTimeUpdate = () => {
-    if (!videoRef.current) return;
-    setCurrentTime(videoRef.current.currentTime);
-    setDuration(videoRef.current.duration || 0);
+    if (!audioRef.current) return;
+    setCurrentTime(audioRef.current.currentTime);
+    setDuration(audioRef.current.duration || 0);
   };
 
   const handleSeek = (e) => {
-    if (!videoRef.current || !duration) return;
+    if (!audioRef.current || !duration) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const fraction = Math.max(0, Math.min(1, clickX / rect.width));
     const seekTime = fraction * duration;
-    videoRef.current.currentTime = seekTime;
+    audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime);
+    if (videoRef.current && videoRef.current.duration) {
+      videoRef.current.currentTime = (seekTime % videoRef.current.duration);
+    }
   };
 
   const toggleMute = () => {
-    if (!videoRef.current) return;
-    videoRef.current.muted = !isMuted;
+    if (!audioRef.current) return;
+    audioRef.current.muted = !isMuted;
     setIsMuted(!isMuted);
   };
 
-  const restartVideo = () => {
-    if (!videoRef.current) return;
-    videoRef.current.currentTime = 0;
-    videoRef.current.play();
+  const restartSong = () => {
+    if (!audioRef.current) return;
+    audioRef.current.currentTime = 0;
+    audioRef.current.play();
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(() => {});
+    }
     setIsPlaying(true);
   };
 
@@ -72,6 +86,19 @@ export default function TealSareeCinematicSection() {
 
   return (
     <section className="relative py-24 sm:py-32 px-4 sm:px-6 max-w-6xl mx-auto text-center">
+      {/* Dedicated Audio Element for vignesh.m4r */}
+      <audio
+        ref={audioRef}
+        src={songSrc}
+        onTimeUpdate={handleTimeUpdate}
+        onEnded={() => {
+          setIsPlaying(false);
+          if (videoRef.current) videoRef.current.pause();
+        }}
+        onLoadedMetadata={() => setDuration(audioRef.current?.duration || 0)}
+        preload="auto"
+      />
+
       {/* Background ambient lighting in teal & rose-gold */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 rounded-full bg-gradient-to-r from-teal-500/15 via-blue-500/15 to-purple-600/15 blur-[160px] pointer-events-none" />
 
@@ -110,11 +137,18 @@ export default function TealSareeCinematicSection() {
               Pure Grace 💙
             </span>
             <span className="text-xs text-rose-200/90 font-medium hidden sm:inline">
-              Portrait & Cinematic Motion
+              Vignesh Theme 🎶
             </span>
           </div>
 
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowPhotoLightbox(true)}
+              className="p-1.5 rounded-full text-rose-300 hover:text-white transition-colors cursor-pointer"
+              title="Full screen view"
+            >
+              <Maximize2 className="w-4 h-4" />
+            </button>
             <motion.button
               whileTap={{ scale: 1.3 }}
               onClick={() => setIsLiked(!isLiked)}
@@ -152,14 +186,22 @@ export default function TealSareeCinematicSection() {
             {/* Vignette */}
             <div className="absolute inset-0 z-10 bg-gradient-to-t from-midnight-950/70 via-transparent to-transparent opacity-40 pointer-events-none" />
 
-            {/* Click to expand button */}
-            <button
-              onClick={() => setShowPhotoLightbox(true)}
-              className="absolute top-3 right-3 z-20 p-2 rounded-full bg-midnight-900/80 backdrop-blur-md text-white hover:text-teal-300 transition-colors shadow-lg cursor-pointer"
-              title="View full portrait"
-            >
-              <Maximize2 className="w-4 h-4" />
-            </button>
+            {/* Center Play Overlay on Photo */}
+            <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/25 group-hover/portrait:bg-black/35 transition-colors">
+              <motion.button
+                whileHover={{ scale: 1.12 }}
+                whileTap={{ scale: 0.94 }}
+                onClick={togglePlay}
+                className="p-5 sm:p-6 rounded-full bg-gradient-to-tr from-teal-500 via-blue-500 to-rosegold-500 text-white shadow-[0_0_35px_rgba(20,184,166,0.9)] border-2 border-white/50 cursor-pointer"
+                aria-label={isPlaying ? 'Pause song' : 'Play Vignesh song'}
+              >
+                {isPlaying ? (
+                  <Pause className="w-8 h-8 fill-white" />
+                ) : (
+                  <Play className="w-8 h-8 fill-white translate-x-0.5" />
+                )}
+              </motion.button>
+            </div>
 
             {/* Bottom Caption Pill on Photo */}
             <div className="absolute bottom-3 inset-x-3 z-20 text-center">
@@ -171,48 +213,55 @@ export default function TealSareeCinematicSection() {
 
           {/* Right: The Cinematic Video Clip Player */}
           <div className="relative aspect-[3/4] w-full overflow-hidden bg-black flex flex-col justify-between group/video">
-            {/* HTML5 Video */}
+            {/* HTML5 Video synced */}
             <video
               ref={videoRef}
               src={videoSrc}
-              onTimeUpdate={handleTimeUpdate}
-              onEnded={() => setIsPlaying(false)}
               playsInline
+              loop
+              muted
               className="w-full h-full object-cover cursor-pointer"
               onClick={togglePlay}
             />
-
-            {/* Center Play Overlay when paused */}
-            {!isPlaying && (
-              <div
-                onClick={togglePlay}
-                className="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer z-10 transition-colors"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.12 }}
-                  whileTap={{ scale: 0.94 }}
-                  onClick={togglePlay}
-                  className="p-5 sm:p-6 rounded-full bg-gradient-to-tr from-teal-500 via-blue-500 to-rosegold-500 text-white shadow-[0_0_30px_rgba(20,184,166,0.8)] border-2 border-white/50 cursor-pointer"
-                  aria-label="Play video"
-                >
-                  <Play className="w-8 h-8 fill-white translate-x-0.5" />
-                </motion.button>
-              </div>
-            )}
 
             {/* Floating Video Badge */}
             <div className="absolute top-3 left-3 z-20">
               <span className="px-2.5 py-1 rounded-full text-[11px] font-medium uppercase tracking-wider bg-black/60 backdrop-blur-md text-white border border-white/20 flex items-center gap-1.5">
                 <Film className="w-3 h-3 text-teal-300" />
-                <span>Motion Clip</span>
+                <span>Motion Video</span>
               </span>
             </div>
+
+            {/* Equalizer Frequency Bars on bottom of video when playing */}
+            {isPlaying && (
+              <div className="absolute bottom-3 inset-x-0 z-20 flex items-end justify-center gap-1 h-6 pointer-events-none">
+                {[40, 90, 60, 100, 45, 80, 55, 95, 35, 70, 85, 50].map((h, i) => (
+                  <motion.div
+                    key={i}
+                    animate={{
+                      height: [`${h * 0.3}%`, `${h}%`, `${h * 0.4}%`],
+                    }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 0.5 + (i % 4) * 0.15,
+                      ease: 'easeInOut',
+                    }}
+                    className="w-1 bg-gradient-to-t from-teal-400 to-rose-400 rounded-full"
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
         {/* Bottom Story & Dedicated Player Control Bar */}
         <div className="p-5 sm:p-7 w-full bg-midnight-950/80 backdrop-blur-xl text-center flex flex-col items-center">
           <div className="max-w-xl mx-auto mb-4">
+            <div className="flex items-center justify-center gap-1.5 text-teal-300 text-xs font-semibold uppercase tracking-wider mb-1">
+              <Music className="w-3.5 h-3.5" />
+              <span>Playing: Vignesh Song (vignesh.m4r)</span>
+            </div>
+            
             <h3 className="font-playfair text-xl sm:text-2xl font-bold text-white mb-2">
               A Glimpse of Timeless Beauty
             </h3>
@@ -224,7 +273,7 @@ export default function TealSareeCinematicSection() {
             </p>
           </div>
 
-          {/* Scrubbable Video Progress Bar */}
+          {/* Scrubbable Audio Progress Bar */}
           <div
             onClick={handleSeek}
             className="group/seek relative w-full max-w-lg h-2 bg-white/10 rounded-full cursor-pointer overflow-hidden my-2 hover:h-2.5 transition-all"
@@ -235,15 +284,15 @@ export default function TealSareeCinematicSection() {
             />
           </div>
 
-          {/* Video Control Bar Buttons */}
+          {/* Control Bar Buttons */}
           <div className="w-full max-w-lg flex items-center justify-between text-xs text-rose-200/80 font-sans px-1 mt-1">
             <span className="font-mono">{formatTime(currentTime)}</span>
 
             <div className="flex items-center gap-3">
               <button
-                onClick={restartVideo}
+                onClick={restartSong}
                 className="p-1.5 rounded-full hover:bg-white/10 text-rose-300 hover:text-white transition-colors cursor-pointer"
-                title="Restart clip"
+                title="Replay from start"
               >
                 <RotateCcw className="w-4 h-4" />
               </button>
